@@ -1,7 +1,10 @@
 import base64logic as el
 import CaesarsCipherLogic as cl
+import RSALogic as rsa
+
 import EncoderDecoderView as ev
+import EncoderDecoderRSAView as ersa
 
 if __name__ == '__main__':
-    logic = cl.Logic()
-    view = ev.EncoderDecoderView(logic)
+    logic = rsa.Logic()
+    view = ersa.EncoderDecoderView(logic)
