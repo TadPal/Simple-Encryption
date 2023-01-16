@@ -2,7 +2,6 @@ import base64
 
 class Logic:
     def __init__(self):
-        # Initialize instance variables for storing the message text, private key, and resulting encoded/decoded text
         self.text = ""
         self.private_key = ""
         self.result = ""
