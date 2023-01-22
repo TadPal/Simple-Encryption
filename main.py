@@ -3,8 +3,8 @@ import EncodeLogics.CaesarsCipherLogic as cl
 import EncodeLogics.RSALogic as rsa
 
 import TkinterView.EncoderDecoderView as ev
-import TkinterView.EncoderDecoderRSAView as Viewrsa
+import TkinterView.EncoderDecoderRSAView as rsav
 
 if __name__ == '__main__':
-    logic = el.Logic()
-    view = ev.EncoderDecoderView(logic)
+    logic = rsa.Logic()
+    view = rsav.EncoderDecoderView(logic)

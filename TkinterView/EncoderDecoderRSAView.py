@@ -13,6 +13,9 @@ class EncoderDecoderView:
         self.text_var = StringVar()
         self.private_key_var = StringVar()
         self.result_var = StringVar()
+        
+        self.keys_status_label = Label(self.root, font="arial 12 bold", text="Load Keys", fg="OrangeRed")
+        self.keys_status_label.place(x=60, y=150)
 
         Label(self.root, font="arial 12 bold", text="MESSAGE").place(x=60, y=60)
         Entry(self.root, font="arial 10", textvariable=self.text_var, bg = "ghost white", width=30).place(x=190, y=60)
@@ -21,33 +24,36 @@ class EncoderDecoderView:
         Entry(self.root, font="arial 10", textvariable=self.private_key_var, bg = "ghost white", width=30).place(x=190, y=90)
 
         Label(self.root, font="arial 12 bold", text="RESULT").place(x=60,y=120)
-        Entry(self.root, font="arial 10 bold", textvariable=self.result_var, bg = "ghost white", width=30).place(x=190, y=120)
-
+        Entry(self.root, font="arial 10 bold", textvariable=self.result_var, bg = "ghost white",width=30).place(x=190, y=120)
+        
         Button(self.root, font="arial 10 bold", text = "LOAD KEYS", padx=2, bg="OrangeRed", width=8, height=2, command=self.load_keys).place(x=150, y=190)
         Button(self.root, font="arial 10 bold", text = "SAVE KEYS", padx=2, bg="LimeGreen", width=8, height=2, command=self.save_keys).place(x=50, y=190)
         Button(self.root, font="arial 10 bold", text = "ENCODE", padx=2, bg="LimeGreen", width=8, height=2, command=self.encode).place(x=250, y=190)
         Button(self.root, font="arial 10 bold", text = "DECODE", padx=2, bg="OrangeRed", width=8, height=2, command=self.decode).place(x=350, y=190)
-        
+
         self.root.mainloop()
 
     def load_keys(self):
-        priv_file = self.private_key_var.get() + '.priv'
-        pub_file = self.private_key_var.get() + '.pub'
-        self.logic.load_keys(priv_file, pub_file)
+        priv_file = self.private_key_var.get() + '.pem'
+        pub_file = self.private_key_var.get() + '_pub.pem'
+        try:
+            self.logic.load_keys(priv_file, pub_file)
+            self.keys_status_label.config(text="Keys Loaded", fg="LimeGreen")
+        except Exception as e:
+            self.keys_status_label.config(text="Error Loading Keys", fg="OrangeRed")
 
     def save_keys(self):
-        priv_file = self.private_key_var.get() + '.priv'
-        pub_file = self.private_key_var.get() + '.pub'
+        priv_file = self.private_key_var.get() + '.pem'
+        pub_file = self.private_key_var.get() + '_pub.pem'
         self.logic.save_keys(priv_file, pub_file)
 
     def encode(self):
         self.logic.text = self.text_var.get()
         self.logic.encode()
-        self.result_var.set(self.logic.result)
+        self.result_var.set(self.logic.result.hex())
 
     def decode(self):
-        self.logic.text = self.text_var.get().encode()
+        self.logic.text = bytearray.fromhex(self.text_var.get())
         self.logic.decode()
         self.result_var.set(self.logic.result)
-
 
