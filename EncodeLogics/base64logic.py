@@ -5,6 +5,7 @@ class Logic:
         self.text = ""
         self.private_key = ""
         self.result = ""
+        self.name = "Base64"
 
     def encode(self):
         def transform(key, message):

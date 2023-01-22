@@ -3,6 +3,7 @@ from Crypto.Cipher import PKCS1_OAEP
 
 class Logic:
     def __init__(self):
+        self.name = "RSA Encryption"
         self.text = ""
         self.result = ""
         self.public_key = ""

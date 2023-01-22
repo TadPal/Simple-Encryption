@@ -3,6 +3,7 @@ class Logic:
         self.text = ""
         self.private_key = ""
         self.result = ""
+        self.name = "Caesars Cipher"
 
     def encode(self):
         # Create an empty list to store the encoded characters
