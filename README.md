@@ -1,6 +1,11 @@
 # Message Encoding Examples
 
-A simple python app to show different types of encoding. From Caesar's cipher to RSA encryption.
+A simple python app to show different types of encoding. 
+
+Including
+- Caesar's cipher
+- Base64
+- RSA
 
 ## Installation
 
