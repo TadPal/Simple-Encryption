@@ -32,9 +32,9 @@ Run the main script and choose desired encoding
 
 1. Fill in the message you want to encode or decode
 2. Enter valid key (see below)
-3. Click encode or decode **NOT FOR RSA!**
+3. Click **"Encode"** or **"Decode**
 
-...for RSA see below
+**"For RSA the approach is a little different"** see [below](#rsa-encryption)
 
 ### Caesar's cipher
 
@@ -52,8 +52,28 @@ This method shift the characters' values based on the valuse of the key characte
 
 This encoding method is a little harder to crack, given that we shift the characters first and that BASE64 uses 64 characters as its base.
 
+Because the key for encoding and decoding is the same we call this **symmetric encryption**
+
 ### RSA Encryption
 
 1. In this case the we must enter the path to the keys' files.
-    - In this project there are some keys already generated here: **RSAKeys/key** but if you want to generate new ones simply press **Save Keys** or simply change the keys by opening the files in a text editor
-2. Than we have to load the keys by pressing **Load Keys**
+    - In this project there are some keys already generated here: **"RSAKeys/key"**, but if you want to generate new ones press **"Save Keys"** or simply change the keys by opening the files in a text editor
+2. Than we have to load the keys by pressing **"Load Keys"**
+3. Now we can enter the desired message to encode or decode
+4. Press **"Encode"** or **"Decode"**
+
+The RSA encryption method is still used for various purposes. What makes it different from the other examples in this project is that it uses two keys (private and public) for encryption. You don't have to tell anyone your private key, you only send them the public key, which they use to encrypt messages meant for you that can only be decrypted with the private key. The same goes for the other person you only get their public key to encrypt. 
+
+We call this **assymetric encryption**.
+
+The RSA encryption takes advatnage of maths and more precisely prime numbers and modulus operation. Explained [here](https://www.youtube.com/watch?v=4zahvcJ9glg). 
+
+The RSA encryption is considered safe only using large keys. As of today 2048 bits is considered as minimum safe key size. 
+
+## TODO:
+- Add more encoding methods
+- Allow private and public keys editing in the GUI.
+
+## Example
+![Example](Example.png)
+
