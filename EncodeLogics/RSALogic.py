@@ -11,7 +11,7 @@ class Logic:
         self.generate_keys()
 
     def generate_keys(self):
-        # Generate a new RSA key pair
+        # Generate a new RSA key pair modulus 2048 bits
         key = RSA.generate(2048)
         self.private_key = key.export_key()
         self.public_key = key.publickey().export_key()

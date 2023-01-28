@@ -10,7 +10,7 @@ class Logic:
         enc = []
         # Iterate through each character in the message text
         for char in self.text:
-            # Shift the character by the key value and append it to the enc list
+            # Shift the character by the key value (in ASCII table) and append it to the enc list
             enc.append(chr((ord(char) + int(self.private_key)) % 256))
         # Join the encoded characters in the enc list and assign the result to the result attribute
         self.result = "".join(enc)
