@@ -1,7 +1,7 @@
 # Message Encoding Examples
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/TadPal/PythonProject)
-[![Python 3.9+](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
 
 A simple python app to show different types of encoding. Using different encoding libraries and Tkinter for GUI.
 
