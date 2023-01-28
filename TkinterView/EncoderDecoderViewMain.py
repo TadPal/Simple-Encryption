@@ -1,7 +1,5 @@
 from tkinter import *
-import EncodeLogics.base64Logic as base64
-import EncodeLogics.CaesarsCipherLogic as caesar
-import EncodeLogics.RSALogic as rsa
+from EncodeLogics import base64Logic as base64, CaesarsCipherLogic as caesar, RSALogic as rsa
 import TkinterView.EncoderDecoderRSAView as RSAView
 import TkinterView.EncoderDecoderView as View
 
