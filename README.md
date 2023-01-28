@@ -1,8 +1,10 @@
 # Message Encoding Examples
 
-A simple python app to show different types of encoding. 
+![GitHub last commit](https://img.shields.io/github/last-commit/TadPal/PythonProject)
 
-Including
+A simple python app to show different types of encoding. Using different encoding libraries and Tkinter for GUI.
+
+Including:
 - Caesar's cipher
 - Base64
 - RSA
@@ -22,3 +24,8 @@ or
 py -m pip install pycryptodome
 py -m pip install pybase64
 ```
+
+## Usage
+
+- After running the main script choose desired encoding
+- 
