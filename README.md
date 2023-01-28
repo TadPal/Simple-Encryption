@@ -34,7 +34,7 @@ Run the main script and choose desired encoding
 2. Enter valid key (see below)
 3. Click **"Encode"** or **"Decode**
 
-**"For RSA the approach is a little different"** see [below](#rsa-encryption)
+**For RSA the approach is a little different** see [below](#rsa-encryption)
 
 ### Caesar's cipher
 
