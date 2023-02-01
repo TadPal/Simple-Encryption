@@ -21,7 +21,7 @@ pip install pycryptodome
 Also this project includes requirements.txt file, you can use it to install the packages like this:
 
 ```bash
-pip install -r patho/to/requirements.txt
+pip install -r path/to/requirements.txt
 ```
 
 ## Usage
