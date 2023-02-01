@@ -18,12 +18,10 @@ You will need to install several packages using [pip](https://pip.pypa.io).
 pip install pybase64
 pip install pycryptodome
 ```
-
-or
+Also this project includes requirements.txt file, you can use it to install the packages like this:
 
 ```bash
-py -m pip install pycryptodome
-py -m pip install pybase64
+pip install -r patho/to/requirements.txt
 ```
 
 ## Usage
@@ -57,10 +55,12 @@ Because the key for encoding and decoding is the same we call this **symmetric e
 ### RSA Encryption
 
 1. In this case the we must enter the path to the keys' files.
-    - In this project there are some keys already generated here: **"RSAKeys/key"**, but if you want to generate new ones press **"Save Keys"** or simply change the keys by opening the files in a text editor
+    - In this project there are some keys already generated here*: **"RSAKeys/key"**, but if you want to generate new ones press **"Save Keys"** or simply change the keys by opening the files in a text editor
 2. Than we have to load the keys by pressing **"Load Keys"**
 3. Now we can enter the desired message to encode or decode
 4. Press **"Encode"** or **"Decode"**
+
+*GitHub can sometimes delete the key file, then you will have to simply press **"Save Keys"** first.
 
 The RSA encryption method is still used for various purposes. What makes it different from the other examples in this project is that it uses two keys (private and public) for encryption. You don't have to tell anyone your private key, you only send them the public key, which they use to encrypt messages meant for you that can only be decrypted with the private key. The same goes for the other person you only get their public key to encrypt. 
 
