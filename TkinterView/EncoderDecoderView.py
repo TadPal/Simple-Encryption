@@ -2,7 +2,7 @@ from tkinter import *
 
 class EncoderDecoderView:
     def __init__(self, logic):
-        # Create a Tkinter TopLevel object and set the size and title of the window
+        '''Create a Tkinter TopLevel object and set the size and title of the window'''
         self.top = Toplevel()
         self.top.geometry("500x300")
         self.top.resizable(0,0)
@@ -37,6 +37,7 @@ class EncoderDecoderView:
 
     
     def encode(self):
+        '''Encode button function to call the logic.encode method and display the result'''
         # Get the message text and private key from the text_var and private_key_var respectively
         self.logic.text = self.text_var.get()
         self.logic.private_key = self.private_key_var.get()
@@ -46,6 +47,7 @@ class EncoderDecoderView:
         self.result_var.set(self.logic.result)
 
     def decode(self):
+        '''Decode button function to call the logic.decode method and display the result'''
         # Get the message text and private key from the text_var and private_key_var respectively
         self.logic.text = self.text_var.get()
         self.logic.private_key = self.private_key_var.get()

@@ -8,6 +8,7 @@ class Logic:
         self.name = "Base64"
 
     def encode(self):
+        '''Uses transform method to shift character value and then encode it using base64'''
         def transform(key, message):
             enc = []
             # Iterate through each character in the message
@@ -23,6 +24,7 @@ class Logic:
         self.result = transform(self.private_key, self.text)
 
     def decode(self):
+        '''Uses transform method to shift character value back and then decode it using base64'''
         def transform(key, message):
             dec = []
             # Decode the message using base64

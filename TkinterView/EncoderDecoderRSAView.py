@@ -33,6 +33,7 @@ class EncoderDecoderView:
         self.top.mainloop()
 
     def load_keys(self):
+        '''Load button to load keys from folder'''
         priv_file = self.private_key_var.get() + '.pem'
         pub_file = self.private_key_var.get() + '_pub.pem'
         try:
@@ -42,16 +43,19 @@ class EncoderDecoderView:
             self.keys_status_label.config(text="Error Loading Keys", fg="OrangeRed")
 
     def save_keys(self):
+        '''Save button to save new keys to folder'''
         priv_file = self.private_key_var.get() + '.pem'
         pub_file = self.private_key_var.get() + '_pub.pem'
         self.logic.save_keys(priv_file, pub_file)
 
     def encode(self):
+        '''Encode button function to call the logic.encode method and display the result'''
         self.logic.text = self.text_var.get()
         self.logic.encode()
         self.result_var.set(self.logic.result.hex())
 
     def decode(self):
+        '''Decode button function to call the logic.decode method and display the result'''
         self.logic.text = bytearray.fromhex(self.text_var.get())
         self.logic.decode()
         self.result_var.set(self.logic.result)

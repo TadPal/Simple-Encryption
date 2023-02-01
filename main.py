@@ -1,4 +1,4 @@
-import TkinterView.EncoderDecoderViewMain as view
+from TkinterView import *
 
 if __name__ == '__main__':
-    view.EncoderDecoderView()
+    EncoderDecoderViewMain.EncoderDecoderView()

@@ -6,6 +6,7 @@ class Logic:
         self.name = "Caesars Cipher"
 
     def encode(self):
+        '''Uses ceasar`s cipher logic to encode the text'''
         # Create an empty list to store the encoded characters
         enc = []
         # Iterate through each character in the message text
@@ -16,6 +17,7 @@ class Logic:
         self.result = "".join(enc)
 
     def decode(self):
+        '''Uses ceasar`s cipher logic to decode the text'''
         # Create an empty list to store the decoded characters
         dec = []
         # Iterate through each character in the message text

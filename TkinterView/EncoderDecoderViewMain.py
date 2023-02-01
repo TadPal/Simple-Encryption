@@ -5,7 +5,7 @@ import TkinterView.EncoderDecoderView as View
 
 class EncoderDecoderView:
     def __init__(self):
-        # Create a Tkinter Tk object and set the size and title of the window
+        '''Create a Tkinter Tk object and set the size and title of the window'''
         self.root = Tk()
         self.root.geometry("300x200")
         self.root.resizable(0,0)

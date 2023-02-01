@@ -11,7 +11,7 @@ class Logic:
         self.generate_keys()
 
     def generate_keys(self):
-        # Generate a new RSA key pair modulus 2048 bits
+        '''Generate a new RSA key pair modulus 2048 bits'''
         key = RSA.generate(2048)
         self.private_key = key.export_key()
         self.public_key = key.publickey().export_key()
@@ -29,11 +29,13 @@ class Logic:
             self.public_key = RSA.import_key(f.read())
 
     def encode(self):
+        '''Uses RSA library method to encrypt text'''
         # Encrypt the message using the public key
         cipher = PKCS1_OAEP.new(self.public_key)
         self.result = cipher.encrypt(self.text.encode())
 
     def decode(self):
+        '''Uses RSA library method to decrypt text'''
         # Decrypt the message using the private key
         cipher = PKCS1_OAEP.new(self.private_key)
         self.result = cipher.decrypt(self.text).decode()
